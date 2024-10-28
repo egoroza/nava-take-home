@@ -1,0 +1,16 @@
+@import '../_colors.scss';
+
+header.header.marketplace {
+  background-color: $primary-color;
+  color: $inverse-text-color;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  h1.header-title {
+    font-size: 1.5em;
+    margin: 0;
+  }
+}

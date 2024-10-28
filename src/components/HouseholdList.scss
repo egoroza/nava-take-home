@@ -1,0 +1,25 @@
+@import '../_colors.scss';
+
+section.household-list {
+  margin: 1em 0;
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  ul.household-members {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5em;
+  }
+}
+
+@media (min-width: 600px) {
+  section.household-list {
+    ul.household-members {
+      flex-direction: row;
+    }
+  }
+}

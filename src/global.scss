@@ -1,0 +1,31 @@
+@import './components/Header.scss';
+@import './components/HouseholdList.scss';
+@import './components/HouseholdMember.scss';
+
+body {
+  font-family: 'Arial';
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.main-content {
+  margin-top: 5em;
+}
+
+.add-member {
+  margin: 2em 0;
+}
+
+.overlay {
+  background-color: $shadow-color;
+  opacity: 0.8;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

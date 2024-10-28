@@ -1,0 +1,65 @@
+@import '../_colors.scss';
+
+dialog.add-member-modal {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  .modal-actions {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+  }
+  form.new-member {
+    width: 100%;
+  }
+  .modal-form-item {
+    margin: 0.5em 0;
+    width: 100%;
+    label {
+      display: block;
+      font-size: 0.9em;
+      font-weight: 800;
+    }
+    input[type='text'] {
+      border: 1px $text-color solid;
+      font-size: 1.5em;
+    }
+    select {
+      font-size: 1em;
+      border: 1px $text-color solid;
+    }
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h2 {
+      margin: 0.5em 0;
+      font-size: 1.5em;
+    }
+  }
+  button.dismiss {
+    border: 0;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 900;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  dialog.add-member-modal {
+    width: 80%;
+    height: 60%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 2px 4px #000000;
+  }
+}

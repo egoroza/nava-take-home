@@ -1,0 +1,17 @@
+@import '../_colors.scss';
+
+button.button {
+  background-color: $secondary-color;
+  color: $inverse-text-color;
+  border: 3px $secondary-color solid;
+  border-radius: 5px;
+  padding: 0.8em;
+  font-weight: 800;
+  font-size: 1em;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}
