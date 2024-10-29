@@ -11,10 +11,11 @@ const HouseholdList: React.FC<HouseholdListProps> = ({
       <h2>{heading}</h2>
       <p>{description}</p>
       <ul className="household-members">
-        {members.map((member: Member) => (
+        {members.map((member: Member, index) => (
           <HouseholdMember
-            key={member.name}
-            name={member.name}
+            key={index}
+            firstName={member.firstName}
+            lastName={member.lastName}
             description={member.description}
             favFruit={member.favFruit}
           />

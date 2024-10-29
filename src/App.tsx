@@ -9,6 +9,7 @@ import './global.scss';
 
 function App() {
   // Pull data from the fake API
+  const API = 'https://63d006cc8a780ae6e681fea9.mockapi.io/api/members';
   const pageHeader = API_DATA?.pageHeader;
   const householdList = API_DATA?.householdList;
   const ctaText = API_DATA?.ctaText;
@@ -17,13 +18,37 @@ function App() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   // Modal State
-  const [memberName, setMemberName] = useState<string>();
+  const [firstName, setFirstName] = useState<string>();
+  const [lastName, setLastName] = useState<string>();
   const [favFruit, setFavFruit] = useState<string>();
   const [contactType, setContactType] = useState<Contact>(0);
 
   useEffect(() => {
-    const names: Member[] = householdList?.members;
-    setCurrentMembers(names);
+    fetch(API).then((response) => response.json()).then(data => 
+      {
+        data.forEach((member: Member) => {
+          
+        })
+      })
+    // try {
+    //   const response = await fetch(API); 
+    //   // { 
+    //   //  firstName
+    //   //  lastName
+    //   //  description
+    //   //  favoriteFruit
+    //   // }
+    //   if (response) {
+    //     response.forEach((person) => {
+    //       const member as Member = person;
+    //       setCurrentMembers([...currentMembers, person]);
+    //     })
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    // const names: Member[] = householdList?.members;
+    // setCurrentMembers(names);
   }, []);
 
   const ClickAddMember = () => {
@@ -32,7 +57,8 @@ function App() {
 
   const AddMember = () => {
     const newMember = {
-      name: memberName,
+      firstName: memberName,
+      lastName:
       description: contactType,
       favFruit: favFruit,
     };

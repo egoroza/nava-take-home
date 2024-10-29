@@ -7,11 +7,18 @@ export interface HouseholdListProps {
   members: Member[];
 }
 
+// export type Member = {
+//   name?: string;
+//   description: Contact;
+//   favFruit?: string;
+// };
+
 export type Member = {
-  name?: string;
-  description: Contact;
-  favFruit?: string;
-};
+  firstName: string,
+  lastName: string,
+  description: string,
+  favFruit: string,
+}
 
 export const ContactMapping = {
   [0]: 'Household contact',

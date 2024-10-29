@@ -3,13 +3,15 @@ import { AddMemberModalProps } from '../types/AddMemberModal.types';
 import './AddMemberModal.scss';
 
 const AddMemberModal: React.FC<AddMemberModalProps> = ({
-  memberName,
+  firstName,
+  lastName,
   favFruit,
   contactType,
   isOpen,
   closeDialog,
   addMember,
-  setMemberName,
+  setFirstName,
+  setLastName,
   setFavFruit,
   setContactType,
 }) => {
@@ -28,12 +30,21 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({
       <form className="new-member">
         <div className="modal-input">
           <div className="modal-form-item">
-            <label htmlFor="member-name">Member Name</label>
+            <label htmlFor="first-name">First Name</label>
             <input
               type="text"
-              id="member-name"
-              value={memberName}
-              onChange={setMemberName}
+              id="first-name"
+              value={firstName}
+              onChange={setFirstName}
+            ></input>
+          </div>
+          <div className="modal-form-item">
+            <label htmlFor="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              value={lastName}
+              onChange={setLastName}
             ></input>
           </div>
           <div className="modal-form-item">
